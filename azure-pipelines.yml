@@ -21,3 +21,10 @@ steps:
     command: 'plan'
     environmentServiceName: 'AKSDEVOPSServConnection'
     allowTelemetryCollection: false
+
+- task: TerraformCLI@0
+  displayName: Terraform Apply
+  inputs:
+    command: 'apply'
+    environmentServiceName: 'AKSDEVOPSServConnection'
+    allowTelemetryCollection: true
