@@ -14,7 +14,7 @@ steps:
   inputs:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/AKSACR'
-    allowTelemetryCollection: false
+    allowTelemetryCollection: true
 
 - task: TerraformCLI@0
   displayName: Terraform Plan
