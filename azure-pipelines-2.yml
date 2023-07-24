@@ -15,11 +15,12 @@ steps:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/ACR'
     allowTelemetryCollection: false
-    
+
 - task: TerraformCLI@0
   displayName: Terraform Plan
   inputs:
     command: 'plan'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/ACR'
     environmentServiceName: 'AKSDEVOPSServConnection'
     allowTelemetryCollection: false
 
