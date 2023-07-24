@@ -5,7 +5,7 @@
 
 trigger:none
 
-pool:
+pool :
   vmImage: ubuntu-latest
 
 steps:
