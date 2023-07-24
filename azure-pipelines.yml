@@ -16,15 +16,17 @@ steps:
     allowTelemetryCollection: true
 
 - task: TerraformCLI@0
-  displayName: Terraform Plan
+  displayName: Terraform plan
   inputs:
     command: 'plan'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/ACR'
     environmentServiceName: 'AKSDEVOPSServConnection'
     allowTelemetryCollection: false
 
 - task: TerraformCLI@0
-  displayName: Terraform Apply
+  displayName: Terraform apply
   inputs:
     command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)?ACR'
     environmentServiceName: 'AKSDEVOPSServConnection'
-    allowTelemetryCollection: true
+    allowTelemetryCollection: false
