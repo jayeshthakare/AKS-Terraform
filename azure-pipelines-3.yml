@@ -9,12 +9,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: TerraformCLI@0
-  displayName: Terraform init
-  inputs:
-    command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/AKSACR'
-    allowTelemetryCollection: true
+
 
 - task: TerraformCLI@0
   displayName: Terraform Plan
