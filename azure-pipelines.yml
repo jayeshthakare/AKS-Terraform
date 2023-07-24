@@ -19,7 +19,7 @@ steps:
   displayName: Terraform plan
   inputs:
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/ACR'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/AKS'
     environmentServiceName: 'AKSDEVOPSServConnection'
     allowTelemetryCollection: false
 
@@ -27,6 +27,6 @@ steps:
   displayName: Terraform apply
   inputs:
     command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)?ACR'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/AKS'
     environmentServiceName: 'AKSDEVOPSServConnection'
     allowTelemetryCollection: false
